@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './CartItem.module.css'
+import cartSprite from '../../assets/sprite.svg';
 
-const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
+const CartItem = ({ item, removeHandler }) => {
   return (
     <div className={styles.cartItem}>
       <div className={styles.cartItemImage}>
@@ -13,21 +14,13 @@ const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
       </Link>
       <p className={styles.cartItemPrice}>${item.price}</p>
 
-      {/* <select className={styles.cartItemSelect}
-        value={item.qty}
-        onChange={(e) => qtyChangeHandler(item.product, e.target.value)}
-      >
-
-        {[...Array(item.countInStock).keys()].map((x) => (
-          <option key={x + 1} value={x + 1}>{x + 1}</option>
-        ))}
-      </select> */}
-
       <button className={styles.cartItemDeleteBtn}
         onClick={() => removeHandler(item.product)}>
-        <i className='fas fa-trash'></i>
+        <svg className={styles.icon}>
+          <use href={cartSprite + "#iconmonstr-trash-can-filled"}  ></use>
+        </svg>
       </button>
-    </div >
+    </div>
   );
 }
 

@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import styles from './NavBar.module.css'
 import { filterByCategories } from '../../redux/actions/productActions'
 import { useDispatch } from 'react-redux'
+import cartSprite from '../../assets/sprite.svg';
+
 
 const NavBar = ({ click }) => {
 
@@ -27,7 +29,11 @@ const NavBar = ({ click }) => {
       <ul className={styles.navbarLinks}>
         <li>
           <Link to="/cart" className={styles.cartLink}>
-            <i className="fas fa-shopping-cart"></i>
+            {/* <i className="fas fa-shopping-cart"></i> */}
+            <svg className={styles.icon}>
+              <use href={cartSprite + "#iconmonstr-trash-can-filled"}  ></use>
+            </svg>
+
             <span>
               Cart
             </span>

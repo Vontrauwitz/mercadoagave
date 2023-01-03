@@ -66,6 +66,12 @@
   font-weight: 900;
 }
 
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: #f4f4f4;
+}
+
 .navItem {
   color: #fff;
   text-decoration: none;
