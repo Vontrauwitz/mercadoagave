@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Home from './components/Screens/Home/Home';
+import Product from './components/Screens/Product/Product';
+import Cart from './components/Screens/Cart/Cart';
+import NavBar from './components/NavBar/NavBar';
+import Backdrop from './components/Backdrop/Backdrop';
+import SideDrawer from './components/SideDrawer/SideDrawer';
+
 
 function App() {
+
+  const [sideToggle, setSideToggle] = useState(false)
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='navBarApp'>
+        <NavBar click={() => setSideToggle(true)} />
+      </div>
+      <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
+      <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
+      <main>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/product/:id" component={Product} />
+          <Route exact path="/cart" component={Cart} />
+        </Switch>
+      </main>
+    </>
   );
 }
 

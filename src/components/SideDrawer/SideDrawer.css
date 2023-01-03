@@ -1,0 +1,102 @@
+.sideDrawer {
+  width: 70%;
+  height: 100vh;
+  background: #fff;
+  /* background: blue; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: all 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.sideDrawer.show {
+  transform: translateX(0);
+}
+
+.sideDrawerLinks {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: center;
+}
+
+.sideDrawerLinks>li {
+  display: flex;
+  align-items: center;
+}
+
+.sideDrawerLinks>li>a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  padding: 1rem;
+  text-decoration: none;
+  color: #2F3A3F;
+  font-size: 1.6rem;
+}
+
+.sideDrawerLinks>li>a:hover {
+  background: #2F3A3F;
+  color: #f4f4f4;
+  font-weight: 900;
+}
+
+.sideDrawerLinks>li>a>span {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.sideDrawerCartBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #2F3A3F;
+  color: #f4f4f4;
+  font-size: 1rem;
+  font-weight: 900;
+  margin-left: 8px;
+}
+
+
+.navItem {
+  color: #fff;
+  text-decoration: none;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  padding: 1rem;
+  text-decoration: none;
+  color: #2F3A3F;
+  font-size: 1.6rem;
+}
+
+.navItem:hover {
+  background: #2F3A3F;
+  color: #f4f4f4;
+  font-weight: 900;
+}
+
+@media(min-width: 960px) {
+  .sideDrawer {
+    display: none;
+  }
+
+}

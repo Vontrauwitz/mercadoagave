@@ -1,0 +1,113 @@
+.cardScreen {
+  width: 300px;
+  padding: 1rem;
+  background-color: #fff;
+  /*cursor: pointer;
+  */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  margin: 8px auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardScreen>img {
+  height: 170px;
+  border-radius: 10px;
+}
+
+.cardtInfo {
+  margin-bottom: 8px;
+}
+
+.CardInfoPrice {
+  font-weight: 900;
+  margin-bottom: .5rem;
+}
+
+.cardInfoName {
+  font-size: 1rem;
+  overflow: hidden;
+  margin-bottom: .5rem;
+  margin-top: .5rem;
+}
+
+.cardInfoDescription {
+  font-size: 0.8rem;
+  margin-bottom: .5rem;
+}
+
+.cardInfoButton {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  color: #2F3A3F;
+  background: #f4f4f4;
+  padding: 8px 16px;
+  border: 1px solid #2F3A3F;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.cardInfoButton:hover {
+  background: #ff628a;
+  color: #2F3A3F;
+  font-weight: 900;
+}
+
+@media (max-width:1232px) {
+  .cardScreen {
+    width: 360px;
+  }
+}
+
+@media (max-width:1115px) {
+  .cardScreen {
+    width: 330px;
+  }
+}
+
+@media (max-width:1028px) {
+  .cardScreen {
+    width: 300px;
+  }
+}
+
+@media (max-width:950px) {
+  .cardScreen {
+    width: 400px;
+  }
+}
+
+@media (max-width:830px) {
+  .cardScreen {
+    width: 330px;
+  }
+}
+
+@media (max-width:700px) {
+  .cardScreen {
+    width: 290px;
+  }
+}
+
+@media (max-width:630px) {
+  .cardScreen {
+    width: 450px;
+    /* background-color: aqua; */
+  }
+}
+
+@media (max-width:500px) {
+  .cardScreen {
+    width: 350px;
+  }
+}
+
+@media (max-width:400px) {
+  .cardScreen {
+    width: 300px;
+  }
+}
