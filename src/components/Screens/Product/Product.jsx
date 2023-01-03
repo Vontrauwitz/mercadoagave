@@ -9,7 +9,6 @@ import { addToCart } from '../../../redux/actions/cartActions';
 
 const Product = ({ match, history }) => {
 
-  // const [qty, setQty] = useState(1);
   const dispatch = useDispatch();
 
   const productDetails = useSelector(state => state.getProductDetails)

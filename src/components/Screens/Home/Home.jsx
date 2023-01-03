@@ -24,7 +24,9 @@ const Home = () => {
       <div className={styles.homeScreenProducts} >
 
         {loading ? (
-          <h2>Loading...</h2>
+          <div className={styles.loaderDiv}>
+            <span className={styles.loader}>Loading</span>
+          </div>
         ) : error ? (
           <h2>{error}</h2>
         ) : (

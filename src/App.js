@@ -16,9 +16,7 @@ function App() {
 
   return (
     <>
-      <div className='navBarApp'>
-        <NavBar click={() => setSideToggle(true)} />
-      </div>
+      <NavBar click={() => setSideToggle(true)} />
       <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
       <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
       <main>
