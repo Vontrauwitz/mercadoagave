@@ -4,6 +4,8 @@ import styles from './Cart.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { removeFromCart } from './../../../redux/actions/cartActions';
+import Swal from 'sweetalert2';
+
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -19,6 +21,17 @@ const Cart = () => {
   const getCartSubTotal = () => {
     return cartItems.reduce((price, item) => (item.price * 1) + price, 0)
   }
+
+  function handleAlert() {
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Your products has been saved 👌🎉',
+      showConfirmButton: false,
+      timer: 1500
+    })
+  }
+
 
   return (
     <div className={styles.cartScreen}>
@@ -43,10 +56,10 @@ const Cart = () => {
           <p>${getCartSubTotal().toFixed(2)} USD</p>
         </div>
         <div>
-          <button>Proceed To Checkout</button>
+          <button onClick={handleAlert} > Proceed To Checkout</button>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
